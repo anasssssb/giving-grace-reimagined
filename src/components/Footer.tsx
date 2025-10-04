@@ -1,3 +1,5 @@
+import logo from "@/assets/logo.png";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -6,9 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center shadow-medium">
-              <span className="text-3xl font-bold text-primary-foreground">JK</span>
-            </div>
+            <img src={logo} alt="Jeway Khan Foundation Logo" className="h-20 w-auto brightness-0 invert" />
             <div className="text-left">
               <h3 className="text-2xl font-bold text-background">JEWAY KHAN</h3>
               <p className="text-sm text-background/80">FOUNDATION</p>

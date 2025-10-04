@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -27,8 +28,8 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center text-white animate-fade-in">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 inline-block">
-            <div className="w-32 h-32 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mb-6 mx-auto border-4 border-white/20 shadow-strong">
-              <span className="text-6xl font-bold text-white">JK</span>
+            <div className="mb-6 mx-auto">
+              <img src={logo} alt="Jeway Khan Foundation Logo" className="h-40 w-auto mx-auto" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
               JEWAY KHAN

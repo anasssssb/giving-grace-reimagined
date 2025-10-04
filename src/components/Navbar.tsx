@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,9 +41,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("home")}>
-            <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center">
-              <span className="text-2xl font-bold text-primary-foreground">JK</span>
-            </div>
+            <img src={logo} alt="Jeway Khan Foundation Logo" className="h-16 w-auto" />
             <div>
               <h2 className="text-xl font-bold text-foreground">JEWAY KHAN</h2>
               <p className="text-xs text-muted-foreground">FOUNDATION</p>
