@@ -29,6 +29,7 @@ const Navbar = () => {
     { label: "Our Mission", id: "mission" },
     { label: "Activities", id: "activities" },
     { label: "Gallery", id: "gallery" },
+    { label: "Certificates", id: "certificates" },
     { label: "Contact Us", id: "contact" },
   ];
 

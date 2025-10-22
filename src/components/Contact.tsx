@@ -1,25 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Building2, Hash, CreditCard, Code, MapPin } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { Building2, Hash, CreditCard, Code, MapPin, Mail, Phone } from "lucide-react";
 
 const Contact = () => {
-  const [email, setEmail] = useState("");
-  const { toast } = useToast();
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      toast({
-        title: "Thank you for subscribing!",
-        description: "You'll receive updates about our work and impact.",
-      });
-      setEmail("");
-    }
-  };
-
   const donationDetails = [
     { icon: Building2, label: "Account Title", value: "Jeway Khan Foundation" },
     { icon: Hash, label: "Account No", value: "3549301000000188" },
@@ -69,32 +51,41 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Newsletter Subscription */}
+          {/* Contact Information */}
           <div className="space-y-8">
             <Card className="shadow-strong border-0 bg-gradient-primary text-primary-foreground animate-fade-in">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">
-                  Subscribe to Stay Informed
+                <h3 className="text-2xl font-bold mb-6">
+                  Get In Touch
                 </h3>
-                <p className="mb-6 opacity-90">
-                  Get updates about our latest activities, success stories, and how your contributions are making a difference.
-                </p>
-                <form onSubmit={handleSubscribe} className="space-y-4">
-                  <Input
-                    type="email"
-                    placeholder="Your Email Address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20"
-                  />
-                  <Button
-                    type="submit"
-                    className="w-full bg-white text-primary hover:bg-white/90 font-semibold"
-                  >
-                    Subscribe Now
-                  </Button>
-                </form>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold opacity-90 mb-1">
+                        Email Address
+                      </p>
+                      <a href="mailto:servantjkf@gmail.com" className="text-base font-medium text-white hover:underline break-all">
+                        servantjkf@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold opacity-90 mb-1">
+                        Contact Number
+                      </p>
+                      <a href="tel:03224818200" className="text-base font-medium text-white hover:underline">
+                        0322 4818200
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
