@@ -8,8 +8,6 @@ const Gallery = () => {
     "https://charity.millionsbit.net/assets/img1/img1.jpg",
     "https://charity.millionsbit.net/assets/img1/img2.jpg",
     "https://charity.millionsbit.net/assets/img1/img7.jpg",
-    "https://charity.millionsbit.net/assets/img1/img4.jpg",
-    "https://charity.millionsbit.net/assets/img1/img5.jpg",
     "https://charity.millionsbit.net/assets/img1/img6.jpg",
   ];
 

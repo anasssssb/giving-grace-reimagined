@@ -4,15 +4,7 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in">
-            <img
-              src="https://charity.millionsbit.net/assets/abt2.jpg"
-              alt="About Jeway Khan Foundation"
-              className="rounded-2xl shadow-strong w-full h-auto object-cover"
-            />
-          </div>
-
+        <div className="max-w-4xl mx-auto">
           <div className="animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               About Us
