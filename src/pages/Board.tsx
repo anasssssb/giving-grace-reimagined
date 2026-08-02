@@ -19,10 +19,10 @@ const leadership: Member[] = [
 ];
 
 const board: Member[] = [
-  { name: "Muhammad Sulaiman Ahmed", role: "Finance Secretary", image: img46.url },
-  { name: "Muhammad Mustafa Ahmed", role: "Joint Secretary", image: img47.url },
-  { name: "Muhammad Musa Ahmed", role: "General Secretary", image: img49.url },
-  { name: "Kuffat Khan", role: "Member", image: img48.url },
+  { name: "Muhammad Sulaiman Ahmed", role: "Finance Secretary", image: sulaimanImg },
+  { name: "Muhammad Mustafa Ahmed", role: "Joint Secretary", image: mustafaImg },
+  { name: "Muhammad Musa Ahmed", role: "General Secretary", image: musaImg },
+  { name: "Kuffat Khan", role: "Member", image: kuffatImg },
   { name: "Adil Asghar Raja", role: "Member" },
 ];
 
