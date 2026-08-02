@@ -2,10 +2,10 @@ import { UserRound } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import img46 from "@/assets/1000171046.jpg.asset.json";
-import img47 from "@/assets/1000171047.jpg.asset.json";
-import img49 from "@/assets/1000171049.jpg.asset.json";
-import img48 from "@/assets/1000171048.jpg.asset.json";
+import sulaimanImg from "@/assets/board/sulaiman-ahmed.jpg";
+import mustafaImg from "@/assets/board/mustafa-ahmed.jpg";
+import musaImg from "@/assets/board/musa-ahmed.jpg";
+import kuffatImg from "@/assets/board/kuffat-khan.jpg";
 
 type Member = {
   name: string;
