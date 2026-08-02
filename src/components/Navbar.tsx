@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +19,11 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    if (location.pathname !== "/") {
+      setIsMobileMenuOpen(false);
+      navigate("/", { state: { scrollTo: id } });
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -61,6 +69,13 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </button>
             ))}
+            <Link
+              to="/board-of-directors"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors relative group"
+            >
+              Board of Directors
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+            </Link>
             <Button
               onClick={() => scrollToSection("contact")}
               className="bg-gradient-secondary text-secondary-foreground hover:opacity-90 transition-opacity shadow-medium"
@@ -90,6 +105,13 @@ const Navbar = () => {
                 {link.label}
               </button>
             ))}
+            <Link
+              to="/board-of-directors"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block w-full text-left px-4 py-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+            >
+              Board of Directors
+            </Link>
             <div className="px-4 pt-2">
               <Button
                 onClick={() => scrollToSection("contact")}
